@@ -7,6 +7,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class GardenioController {
+	
+	@GetMapping(value = "/")
+	public String home() {
+		return "Hello!";
+	}
 
 	@GetMapping(value = "/configure")
 	public List<String> configure() {
